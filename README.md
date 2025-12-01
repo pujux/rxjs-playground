@@ -1,6 +1,6 @@
 # RxJS Playground
 
-Interactive Next.js sandbox for experimenting with RxJS. Visualizes emissions on a live timeline plus an event log. The helper `rxObserver()` bridges your code to the UI so you can see values as they flow.
+Interactive sandbox for experimenting with RxJS. Visualizes emissions on a live timeline plus an event log. The helper `rxObserver()` bridges your code to the UI so you can see values as they flow.
 
 ## Features
 
