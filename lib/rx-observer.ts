@@ -16,7 +16,8 @@ export function createRxObserver(postMessage: typeof window.postMessage) {
         postMessage({ type: "error", observerId, message: value });
       },
       complete: () => {
-        postMessage({ type: "completed", observerId });
+        let timestamp = Date.now() - startTime;
+        postMessage({ type: "completed", observerId, timestamp, series });
       },
     };
   };

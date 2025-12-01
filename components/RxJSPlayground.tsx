@@ -19,7 +19,7 @@ const observable$ = interval(200).pipe(
   take(10)
 );
 
-observable$.subscribe(rxObserver());`;
+observable$.subscribe(rxObserver("my-observable"));`;
 
 export default function RxJSPlayground() {
   const [worker, setWorker] = useState<Worker | null>(null);
@@ -63,6 +63,15 @@ export default function RxJSPlayground() {
           ]);
           break;
         case "completed":
+          setEvents((prev) => [
+            ...prev,
+            {
+              timestamp: msg.timestamp,
+              observerId: msg.observerId,
+              series: msg.series,
+              value: "✓",
+            },
+          ]);
           observers.delete(msg.observerId);
           if (observers.size === 0) {
             w.terminate();

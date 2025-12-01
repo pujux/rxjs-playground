@@ -11,8 +11,8 @@ const circleRenderer = (props: any) => {
   const { cx, cy, payload } = props;
   return (
     <g>
-      <circle cx={cx} cy={cy} r={15} fill="#06b6d4" stroke="#000" strokeWidth={2} />
-      <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central" fill="#000" fontSize={14} fontWeight={500}>
+      <circle cx={cx} cy={cy} r={20} fill="#06b6d4" stroke="#000" strokeWidth={2} />
+      <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central" fill="#000" fontSize={14} fontWeight={600}>
         {payload.value}
       </text>
     </g>
